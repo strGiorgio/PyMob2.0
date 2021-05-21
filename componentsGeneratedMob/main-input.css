@@ -1,0 +1,12 @@
+.main-input {
+    background-color: #c7c7c7;
+    border: 3px solid #a14a14;
+    height: 30px;
+    border-radius: 20px;
+    padding: 0 10px;
+    font: 2rem "Press Start 2P";
+}
+
+.main-input.inputName {
+    
+}

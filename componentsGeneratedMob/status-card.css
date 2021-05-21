@@ -1,0 +1,11 @@
+.status-card {
+    background-color: #7c3a10;
+    height: 65rem;
+    width: 100rem;
+
+    font: 3rem "Press Start 2P", cursive;
+}
+
+.status-card .main-text {
+    margin: 3rem 0;
+}
