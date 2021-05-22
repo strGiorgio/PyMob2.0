@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="componentsGeneratedMob/main-img.css">
     <link rel="stylesheet" href="componentsGeneratedMob/status-card.css">
     <link rel="stylesheet" href="componentsGeneratedMob/main-input.css">
+    <link rel="stylesheet" href="components/main-button.css">
+    <link rel="stylesheet" href="componentsGeneratedMob/main-value.css">
 </head>
 <body>
     <header class="main-header">
@@ -28,13 +30,16 @@
         </figure>
         <div class="status-card">
             <label class="main-text" for="name">Escolha o nome do seu Mob:</label><br>
-            <input class="main-input inputName" id="name" type="text">
+            <div class="wrapper-input">
+                <input class="main-input inputName" id="name" type="text" maxlength="12" minlength="2" required>
+                <button type="submit" for="name" class="main-button">Pronto!</button>
+            </div>
 
-            <p class="main-text">Hp:</p>
-            <p class="main-text">Defesa:</p>
-            <p class="main-text">Estamina:</p>
-            <p class="main-text">Força:</p>
-            <p class="main-text">Level:</p>
+            <p class="main-text">Hp:      <strong id="hp" class="main-value">0</strong></p>
+            <p class="main-text">Defesa:  <strong id="defense" class="main-value">0</strong></p>
+            <p class="main-text">Estamina:<strong id="stamina" class="main-value">0</strong></p>
+            <p class="main-text">Força:   <strong id="strength" class="main-value">0</strong></p>
+            <p class="main-text">Level:   <strong id="level" class="main-value">0</strong></p>
         </div>
     </section>
 </body>
