@@ -1,0 +1,18 @@
+.status-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #7c3a10;
+    height: 65rem;
+    width: 100rem;
+
+    font: 3rem "Press Start 2P", cursive;
+}
+
+.status-card .wrapper-input {
+    display: flex;
+}
+
+.status-card .main-text {
+    margin: 3rem;
+}
