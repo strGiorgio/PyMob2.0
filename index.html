@@ -9,17 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 
-    <link rel="stylesheet" href="components/reset.css">
-    <link rel="stylesheet" href="components/main-header.css">
-    <link rel="stylesheet" href="componentsMenu/menu-section.css">
-    <link rel="stylesheet" href="componentsMenu/main-title.css">
-    <link rel="stylesheet" href="components/main-button.css">
+    <link rel="stylesheet" href="css/components/reset.css">
+    <link rel="stylesheet" href="css/components/main-header.css">
+    <link rel="stylesheet" href="css/componentsMenu/menu-section.css">
+    <link rel="stylesheet" href="css/componentsMenu/main-title.css">
+    <link rel="stylesheet" href="css/components/main-button.css">
 
-    <link rel="stylesheet" href="components/close-menu.css">
+    <link rel="stylesheet" href="css/components/close-menu.css">
 
-    <link rel="stylesheet" href="componentsMenu/wrapper-menu-close.css">
-    <link rel="stylesheet" href="componentsMenu/menu-help.css">
-    <link rel="stylesheet" href="componentsMenu/title-help.css">
+    <link rel="stylesheet" href="css/componentsMenu/wrapper-menu-close.css">
+    <link rel="stylesheet" href="css/componentsMenu/menu-help.css">
+    <link rel="stylesheet" href="css/componentsMenu/title-help.css">
 </head>
 <body>
     <header class="main-header">
@@ -28,9 +28,9 @@
     <section class="menu-section">
         <h1 class="main-title">PyMob</h1>
         <a href="screen-generatedMob.html"><button class="main-button menu">Novo Jogo</button></a>
-        <a href=""><button class="main-button menu">Como Jogar?</button></a>
+        <button class="main-button menu open">Como Jogar?</button>
 
-        <div class="menu-help on">
+        <div class="menu-help">
             <div class="wrapper-menu-close">
             <p>Press [ESC] to close</p>
                 <div class="close-menu">
@@ -51,5 +51,7 @@
         </div>
 
     </section>
+
+    <script src="scripts/menu-help.js"></script>
 </body>
 </html>

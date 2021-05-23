@@ -1,9 +1,0 @@
-.main-figure {
-    display: flex;
-    flex-direction: column;
-    background-color: #7c3a10;
-    height: 65rem;
-    width: 35rem;
-    align-items: center;
-    justify-content: center;
-}
