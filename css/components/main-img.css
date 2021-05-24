@@ -1,0 +1,12 @@
+.main-img {
+    height: 60rem;
+    width: 30rem;
+    border: 5px solid #5f2d0d;
+    box-sizing: border-box;
+}
+
+.main-img._attributeSection {
+    height: 40rem;
+    width: 30rem;
+    border: 5px solid #5f2d0d;
+}
