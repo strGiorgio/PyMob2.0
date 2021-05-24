@@ -1,0 +1,12 @@
+.second-button {
+    background-color: rgb(29, 199, 23);
+    box-sizing: border-box;
+    border: 2px solid #000;
+    font: 3rem "Press Start 2P", cursive;
+    height: 14rem;
+    width: 30rem;
+}
+
+.second-button:hover {
+    transform: scale(1.02);
+}

@@ -1,0 +1,6 @@
+.wrapper-card-name {
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+    justify-content: space-between;
+}
