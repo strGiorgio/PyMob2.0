@@ -5,7 +5,7 @@ const openButton = document.querySelector('.main-button.menu.open');
 openButton.addEventListener('click', open)
 closeButton.addEventListener('click', close);
 
-document.addEventListener('keydown', closeByEsc)
+document.addEventListener('keydown', closeByEsc);
 
 function open() {
     menuHelp.classList.toggle('on');
@@ -17,9 +17,8 @@ function close() {
 
 function closeByEsc(event) {
     const isEsc = event.key == 'Escape';
-    console.log(event.key);
 
     if (isEsc) {
-        menuHelp.classList.remove('on')
+        menuHelp.classList.remove('on');
     }
 }
