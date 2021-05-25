@@ -1,5 +1,19 @@
 .attributes-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: #92420f;
     height: 60rem;
     width: 90rem;
+
+    font: 3rem "Press Start 2P", cursive;
+}
+
+.attributes-card .points-level {
+    display: flex;
+    justify-content: space-around;
+}
+
+.attributes-card .main-text {
+    margin: 0 3rem;
 }
