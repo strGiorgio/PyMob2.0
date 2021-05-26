@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/components/main-img.css">
     <link rel="stylesheet" href="css/componentsAttributes/second-button.css">
     <link rel="stylesheet" href="css/componentsAttributes/attributes-card.css">
+    <link rel="stylesheet" href="css/componentsAttributes/main-value-attributes.css">
 
 </head>
 <body>
@@ -27,7 +28,7 @@
     <section class="attributes-section">
         <div class="wrapper-card-name">
             <figure class="wrapper-mobCard">
-                <figcaption class="nameCaption">Nome aqui</figcaption>
+                <figcaption id="name" class="nameCaption">Nome aqui</figcaption>
                 <img class="main-img _attributeSection" src="assets/mob.jpg" alt="">
             </figure>
             <button class="second-button play">Fight!</button>
@@ -35,14 +36,16 @@
 
         <div class="attributes-card">
             <div class="points-level">
-                <p class="main-text">Points: </p>
-                <p class="main-text">Level: </p>
+                <p class="main-text">Points: <span id="points" class="main-value-attributes">0</span></p>
+                <p class="main-text">Level: <span id="level" class="main-value-attributes">0</span></p>
             </div>
-            <p class="main-text">Hp: </p>
-            <p class="main-text">Defesa: </p>
-            <p class="main-text">Estamina: </p>
-            <p class="main-text">Strength: </p>
+            <p class="main-text">Hp: <span id="hp" class="main-value-attributes">0</span></p>
+            <p class="main-text">Defesa: <span id="defense" class="main-value-attributes">0</span></p>
+            <p class="main-text">Estamina: <span id="stamina" class="main-value-attributes">0</span></p>
+            <p class="main-text">Força: <span id="strength" class="main-value-attributes">0</span></p>
         </div>
     </section>
+
+    <script src="scripts/main-mob.js"></script>
 </body>
 </html>
