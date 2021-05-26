@@ -16,15 +16,16 @@ class mob {
         this.mobStamina = 2;
         this.mobStrength = 4;
         this.mobLevel = 1;
+    }
 
+    showProperties() {
+        //Aparece isso na tela
         hpValue.innerHTML = this.mobHp;
         defValue.innerHTML = this.mobDefense;
         staValue.innerHTML = this.mobStamina;
         stgValue.innerHTML = this.mobStrength;
-        lvlValue.innerHTML = this.mobLevel;
-    }
-
-    showProperties() {
+        lvlValue.innerHTML = this.mobLevel; 
+        //Aparece isso no console
         console.log(this.mobName);
         console.log(this.mobHp);
         console.log(this.mobDefense);
@@ -32,8 +33,37 @@ class mob {
         console.log(this.mobStrength);
         console.log(this.mobLevel);
     }
+
+    increment(attr) {
+        switch (attr) {
+            case "hp":
+                this.mobHp ++;
+                hpValue.innerHTML = this.mobHp;
+                break
+
+            case "defense":
+                this.mobDefense ++;
+                defValue.innerHTML = this.mobDefense
+                break
+            
+            case "stamina":
+                this.mobStamina ++;
+                staValue.innerHTML = this.mobStamina
+                break
+
+            case "strength":
+                this.mobStrength ++;
+                stgValue.innerHTML = this.mobStrength
+                break
+            
+            default:
+                break
+        }   
+        
+    }
 }
 mob = new mob();
+mob.showProperties()
 
 function nameDef() {
     let mobName = nameValue.value
@@ -45,3 +75,11 @@ function nameDef() {
         mob.showProperties()
     }
 }
+
+mob.increment("hp")
+mob.increment("hp")
+mob.increment("strength")
+mob.increment("stamina")
+mob.increment("defense")
+mob.increment("defense")
+mob.increment("defense")
