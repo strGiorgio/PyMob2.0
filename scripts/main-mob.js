@@ -75,11 +75,3 @@ function nameDef() {
         mob.showProperties()
     }
 }
-
-mob.increment("hp")
-mob.increment("hp")
-mob.increment("strength")
-mob.increment("stamina")
-mob.increment("defense")
-mob.increment("defense")
-mob.increment("defense")
