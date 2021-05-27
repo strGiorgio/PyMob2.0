@@ -1,0 +1,16 @@
+.main-addButton {
+    display: inline-flex;
+    font: 1.8rem "Press Start 2P", cursive;
+    background-color: green;
+    border: 5px solid #000;
+    justify-content: center;
+    height: 3rem;
+    width: 10rem;
+    margin: auto 30px;
+
+    opacity: 30%;
+}
+
+.main-addButton:hover {
+    opacity: 100%;
+}
