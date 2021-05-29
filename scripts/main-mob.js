@@ -7,6 +7,9 @@ const lvlValue = document.querySelector('#level');
 const nameValue = document.querySelector('.main-input.inputName');
 const readyButton = document.querySelector('.main-button.readyB');
 
+const points = 10;
+const addButton = document.querySelector('.main-addButton');
+
 
 class mob {
     constructor(name) {
@@ -63,7 +66,7 @@ class mob {
     }
 }
 mob = new mob();
-mob.showProperties()
+mob.showProperties();
 
 function nameDef() {
     let mobName = nameValue.value
@@ -73,5 +76,21 @@ function nameDef() {
     }else {
         mob.mobName = mobName;
         mob.showProperties()
+    }
+}
+
+function pointsTrade(attr) {
+    if (points === 0) {
+        console.log('Você não possui pontos suficientes!');
+    } 
+
+    if (attr === 'hp') {
+        console.log(attr);
+    } else if (attr === 'def') {
+        console.log(attr);
+    } else if (attr === 'sta') {
+        console.log(attr);
+    } else if (attr === 'stg') {
+        console.log(attr);
     }
 }
