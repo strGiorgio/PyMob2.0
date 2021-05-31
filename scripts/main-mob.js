@@ -1,3 +1,4 @@
+const nameCard = document.querySelector('#name');
 const hpValue = document.querySelector('#hp');
 const defValue = document.querySelector('#defense');
 const staValue = document.querySelector('#stamina');
@@ -7,7 +8,7 @@ const lvlValue = document.querySelector('#level');
 const nameValue = document.querySelector('.main-input.inputName');
 const readyButton = document.querySelector('.main-button.readyB');
 
-const points = 10;
+const points = 0;
 const addButton = document.querySelector('.main-addButton');
 
 
@@ -23,6 +24,7 @@ class mob {
 
     showProperties() {
         //Aparece isso na tela
+        nameCard.innerHTML = this.mobName;
         hpValue.innerHTML = this.mobHp;
         defValue.innerHTML = this.mobDefense;
         staValue.innerHTML = this.mobStamina;
@@ -65,22 +67,24 @@ class mob {
         
     }
 }
-mob = new mob();
-mob.showProperties();
 
 function nameDef() {
     let mobName = nameValue.value
     console.log(mobName.length);
     if (mobName.length <= 2){
-        alert('O Nome precisa ter mais de duas letras ou números!');
+        window.alert('O Nome precisa ter mais de duas letras ou números!');
     }else {
-        mob.mobName = mobName;
-        mob.showProperties()
+        let r = window.confirm(`Tem certeza que deseja utilizar "${mobName}" como nome do seu mob?`);
+        if (r == true) {
+            mob.mobName = mobName;
+            mob.showProperties();
+            location.href = '../screen-showAttributes.html';
+        }
     }
 }
 
 function pointsTrade(attr) {
-    if (points === 0) {
+    if (points <= 0) {
         console.log('Você não possui pontos suficientes!');
     } 
 
@@ -94,3 +98,6 @@ function pointsTrade(attr) {
         console.log(attr);
     }
 }
+
+mob = new mob();
+mob.showProperties();
