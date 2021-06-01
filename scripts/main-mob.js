@@ -1,4 +1,5 @@
 const nameCard = document.querySelector('#name');
+const pointsValue = document.querySelector('#points');
 const hpValue = document.querySelector('#hp');
 const defValue = document.querySelector('#defense');
 const staValue = document.querySelector('#stamina');
@@ -8,9 +9,8 @@ const lvlValue = document.querySelector('#level');
 const nameValue = document.querySelector('.main-input.inputName');
 const readyButton = document.querySelector('.main-button.readyB');
 
-const points = 0;
 const addButton = document.querySelector('.main-addButton');
-
+var points = 10;
 
 class mob {
     constructor(name) {
@@ -22,21 +22,25 @@ class mob {
         this.mobLevel = 1;
     }
 
-    showProperties() {
-        //Aparece isso na tela
-        nameCard.innerHTML = this.mobName;
-        hpValue.innerHTML = this.mobHp;
-        defValue.innerHTML = this.mobDefense;
-        staValue.innerHTML = this.mobStamina;
-        stgValue.innerHTML = this.mobStrength;
-        lvlValue.innerHTML = this.mobLevel; 
-        //Aparece isso no console
-        console.log(this.mobName);
-        console.log(this.mobHp);
-        console.log(this.mobDefense);
-        console.log(this.mobStamina);
-        console.log(this.mobStrength);
-        console.log(this.mobLevel);
+    showProperties(modo) {
+        if (modo == "screen") {
+            //Aparece isso na tela
+            nameCard.innerHTML = this.mobName;
+            pointsValue.innerHTML = points;
+            hpValue.innerHTML = this.mobHp;
+            defValue.innerHTML = this.mobDefense;
+            staValue.innerHTML = this.mobStamina;
+            stgValue.innerHTML = this.mobStrength;
+            lvlValue.innerHTML = this.mobLevel; 
+        } else if (modo == "console"){
+            //Aparece isso no console
+            console.log(this.mobName);
+            console.log(this.mobHp);
+            console.log(this.mobDefense);
+            console.log(this.mobStamina);
+            console.log(this.mobStrength);
+            console.log(this.mobLevel);
+        }
     }
 
     increment(attr) {
@@ -68,6 +72,10 @@ class mob {
     }
 }
 
+mob = new mob();
+mob.showProperties('screen');
+mob.showProperties('console');
+
 function nameDef() {
     let mobName = nameValue.value
     console.log(mobName.length);
@@ -77,8 +85,8 @@ function nameDef() {
         let r = window.confirm(`Tem certeza que deseja utilizar "${mobName}" como nome do seu mob?`);
         if (r == true) {
             mob.mobName = mobName;
-            mob.showProperties();
-            location.href = '../screen-showAttributes.html';
+            mob.showProperties('screen');
+            //location.href = '../screen-showAttributes.html';
         }
     }
 }
@@ -86,18 +94,34 @@ function nameDef() {
 function pointsTrade(attr) {
     if (points <= 0) {
         console.log('Você não possui pontos suficientes!');
-    } 
+    } else {
+        if (attr == "hp") {
+            console.log(attr);
+            points = points - 1;
+            mob.increment('hp');
+            mob.showProperties('screen');
+        }
+        else if (attr == "def") {
+            console.log(attr);
+            points = points - 1;
 
-    if (attr === 'hp') {
-        console.log(attr);
-    } else if (attr === 'def') {
-        console.log(attr);
-    } else if (attr === 'sta') {
-        console.log(attr);
-    } else if (attr === 'stg') {
-        console.log(attr);
+            mob.increment('defense');
+            mob.showProperties('screen');
+        }
+        else if (attr == "sta") {
+            console.log(attr);
+            points = points - 1;
+            mob.increment('stamina');
+            mob.showProperties('screen');
+        }
+        else if (attr == "stg") {
+            console.log(attr);
+            points = points - 1;
+            mob.increment('strength');
+            mob.showProperties('screen');
+        }
     }
+    
 }
 
-mob = new mob();
-mob.showProperties();
+
