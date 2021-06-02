@@ -13,7 +13,7 @@ const addButton = document.querySelector('.main-addButton');
 var points = 10;
 
 class mob {
-    constructor(name) {
+    constructor(name = "Romarinho") {
         this.mobName = name;
         this.mobHp = 20;
         this.mobDefense = 2;
@@ -86,7 +86,7 @@ function nameDef() {
         if (r == true) {
             mob.mobName = mobName;
             mob.showProperties('screen');
-            //location.href = '../screen-showAttributes.html';
+            location.href = "../screen-showAttributes.html";
         }
     }
 }
