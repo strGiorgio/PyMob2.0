@@ -10,3 +10,9 @@
     width: 30rem;
     border: 5px solid #5f2d0d;
 }
+
+.main-img._enemy {
+    height: 30rem;
+    width: 15rem;
+    border: none;
+}

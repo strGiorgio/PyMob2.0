@@ -3,7 +3,7 @@
 
     background-color: #A84D16;
     height: calc(100vh - 60px);
-    width: 100%;
+    width: 100vw;
 
     border: 10px solid #92420f;
     box-sizing: border-box;
