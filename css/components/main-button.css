@@ -2,7 +2,6 @@
     font-family: "Press Start 2P", cursive;
     background-color: #5C4D42;
     border: 2px solid #000;
-
     transition: transform 100ms;
 }
 
@@ -15,3 +14,9 @@
 .main-button:hover {
     transform: scale(1.02);
 }
+
+.main-button._status {
+    width: 15rem;
+    margin: 0;
+}
+
