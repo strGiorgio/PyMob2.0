@@ -15,4 +15,7 @@
     height: 30rem;
     width: 15rem;
     border: none;
+    position: absolute;
+    right: 30px;
+    z-index: 3;
 }
