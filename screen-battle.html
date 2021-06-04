@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyMob Battle</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="css/components/reset.css">
     <link rel="stylesheet" href="css/components/main-header.css">
     <link rel="stylesheet" href="css/componentsBattle/battle-section.css">
     <link rel="stylesheet" href="css/componentsBattle/main-lifeBar.css">
+    <link rel="stylesheet" href="css/componentsBattle/wrapper-battleArea.css">
     <link rel="stylesheet" href="css/components/main-img.css">
+    <link rel="stylesheet" href="css/componentsBattle/card-status.css">
+    <link rel="stylesheet" href="css/componentsBattle/text-status.css">
+    <link rel="stylesheet" href="css/components/main-button.css">
 </head>
     
 <body>
@@ -19,7 +26,22 @@
     </header>
     <section class="battle-section">
         <progress class="main-lifeBar _enemy" max="100" value="30"></progress>
-        <img class="main-img _enemy" src="assets/enemy.png" alt="">
+        
+        <div class="wrapper-battleArea">
+            <img class="main-img _enemy" src="assets/enemy.png" alt="">
+            <div class="circle-floor"></div>
+        
+            <div class="card-status">
+                <progress class="main-lifeBar _mob"></progress>
+                <p class="text-status">30/100</p>
+                <button class="main-button _status">Atc!</button>
+                <button class="main-button _status">Reg</button><br>
+                <button class="main-button _status">Atc. esp</button>
+                <button class="main-button _status">Fgr</button>
+            </div>
+        </div>
+        
     </section>
+    
 </body>
 </html>
