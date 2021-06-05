@@ -1,11 +1,14 @@
 .wrapper-battleArea {
+    display: flex;
+    align-items: center;
     position: relative;
     height: 45rem;
 }
 
 .wrapper-battleArea .circle-floor {
-    background-color: rgb(160, 160, 160);
+    background-image: url('../../assets/stone.jpg');
     border-radius: 50%;
+    box-shadow: 5px 5px 10px #000;
     height: 35rem;
     width: 70rem;
     transform: perspective(30rem) rotateX(40deg);
