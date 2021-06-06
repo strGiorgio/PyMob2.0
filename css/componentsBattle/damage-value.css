@@ -1,0 +1,33 @@
+.damage-value {
+    font-size: 2rem;
+}
+
+.damage-value._enemyDmg {
+    color: red;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+}
+
+.damage-value._enemyReg {
+    color: green;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+}
+
+/*MOB*/
+
+.damage-value._mobDmg {
+    color: red;
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+}
+
+.damage-value._mobReg {
+    color: green;
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+}
