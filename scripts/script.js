@@ -19,24 +19,7 @@ const reg = document.querySelector('#reg');
 const atkE = document.querySelector('#atkE');
 const fgr = document.querySelector('fgr');
 
-function action(action){
-    switch(action) {
-        case 'atk':
-            console.log('Atacou!');
-            break
-        case 'reg':
-            console.log('Regenerou!');
-            break
-        case 'atkE':
-            console.log('Atacou com ataque especial!');
-            break
-        case 'fgr':
-            console.log('Fugiu!');
-            break
-        default:
-            break
-    }
-}
+
 
 class mob {
     constructor(name = "Romarinho") {
@@ -98,22 +81,58 @@ class mob {
     }
 
     callBattle() {
-        battle(this.mobHp, this.mobDefense, this.mobStamina, this.mobStrength, points, this.mobLevel);
+        battle = new battle(this.mobHp, this.mobDefense, this.mobStamina, this.mobStrength, points, this.mobLevel);
     }
 }
 
-function battle(hp, def, sta, stg, points, lvl) {
-    console.log(`Mob Hp: ${hp}`);
-    console.log(`Mob Defense: ${def}`);
-    console.log(`Mob Stamina: ${sta}`);
-    console.log(`Mob Strenght: ${stg}`);
-    console.log(`Mob Points: ${points}`);
-    console.log(`Mob Level: ${lvl}`);
+class battle {
+    constructor(hp, def, sta, stg, points, lvl){
+        console.log(`Mob Hp: ${hp}`);
+        console.log(`Mob Defense: ${def}`);
+        console.log(`Mob Stamina: ${sta}`);
+        console.log(`Mob Strenght: ${stg}`);
+        console.log(`Mob Points: ${points}`);
+        console.log(`Mob Level: ${lvl}`);
+
+        const reg = sta * def;
+        const hit =  sta * stg;
+        const atk_esp = hit * 1.5;
+    }
+    
+    actions() {
+        console.log(`vc deu ${hit} no enimigo`)
+    }
+    
+    
+
 }
 
 mob = new mob();
 mob.showProperties('screen');
 mob.showProperties('console');
+
+function startBattle() {
+    mob.callBattle();
+}
+
+function action(action){
+    switch(action) {
+        case 'atk':
+            console.log('Atacou!');
+            break
+        case 'reg':
+            console.log('Regenerou!');
+            break
+        case 'atkE':
+            console.log('Atacou com ataque especial!');
+            break
+        case 'fgr':
+            console.log('Fugiu!');
+            break
+        default:
+            break
+    }
+}
 
 function nameDef() {
     let mobName = nameValue.value
@@ -162,5 +181,3 @@ function pointsTrade(attr) {
     }
     
 }
-
-mob.callBattle();
