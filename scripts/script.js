@@ -82,30 +82,35 @@ class mob {
 
     callBattle() {
         battle = new battle(this.mobHp, this.mobDefense, this.mobStamina, this.mobStrength, points, this.mobLevel);
+        battle.enemy(1);
     }
 }
 
 class battle {
     constructor(hp, def, sta, stg, points, lvl){
+        console.log('batalha iniciada');
         console.log(`Mob Hp: ${hp}`);
         console.log(`Mob Defense: ${def}`);
         console.log(`Mob Stamina: ${sta}`);
         console.log(`Mob Strenght: ${stg}`);
         console.log(`Mob Points: ${points}`);
-        console.log(`Mob Level: ${lvl}`);
 
-        const reg = sta * def;
-        const hit =  sta * stg;
-        const atk_esp = hit * 1.5;
+        const mobHit = sta * stg;
+        const mobReg = sta * def;
+        const mobAtkEsp = stg * 1.5;
     }
-    
-    actions() {
-        console.log(`vc deu ${hit} no enimigo`)
-    }
-    
-    
 
-}
+    enemy(lvl) {
+        const enemyHp = (lvl / 2) * 20;
+        const enemyDef = (lvl / 2) * 2;
+        const enemySta = (lvl / 2) * 2;
+        const enemyStg = (lvl / 2) * 4;
+
+        const enemyHit = enemySta * enemyStg;
+        const enemyReg = enemySta * enemyDef;
+        
+    }
+};
 
 mob = new mob();
 mob.showProperties('screen');
