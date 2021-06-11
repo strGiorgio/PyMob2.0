@@ -19,7 +19,11 @@ const reg = document.querySelector('#reg');
 const atkE = document.querySelector('#atkE');
 const fgr = document.querySelector('fgr');
 
+const enemyLifeBar = document.querySelector('#enemyLifeBar');
+const mobLifeBar = document.querySelector('#mobLifeBar');
 
+enemyLifeBar.value = '70'
+mobLifeBar.value = '70'
 
 class mob {
     constructor(name = "Romarinho") {

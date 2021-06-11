@@ -26,7 +26,7 @@
         <div class="_squareUser"></div>
     </header>
     <section class="battle-section">
-        <progress class="main-lifeBar _enemy" max="100" value="30"></progress>
+        <progress id="enemyLifeBar" class="main-lifeBar _enemy" max="100" value="30"></progress>
         
         <div class="wrapper-battleArea">
             <img class="main-img _enemy" src="assets/enemy.png" alt="">
@@ -34,7 +34,7 @@
             <p class="damage-value _enemyDmg">10</p>
         
             <div class="card-status">
-                <progress class="main-lifeBar _mob"></progress>
+                <progress id="mobLifeBar" class="main-lifeBar _mob" max="100" value="100"></progress>
                 <p class="text-status">30/100</p>
                 <button id="atk" class="main-button _status" onclick="action('atk')">Atc!</button>
                 <button id="reg" class="main-button _status" onclick="action('reg')">Reg</button><br>
