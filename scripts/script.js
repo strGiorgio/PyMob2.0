@@ -22,8 +22,6 @@ const fgr = document.querySelector('fgr');
 const enemyLifeBar = document.querySelector('#enemyLifeBar');
 const mobLifeBar = document.querySelector('#mobLifeBar');
 
-enemyLifeBar.value = '70'
-mobLifeBar.value = '70'
 
 class mob {
     constructor(name = "Romarinho") {
@@ -105,13 +103,15 @@ class battle {
     }
 
     enemy(lvl) {
-        const enemyHp = (lvl / 2) * 20;
-        const enemyDef = (lvl / 2) * 2;
-        const enemySta = (lvl / 2) * 2;
-        const enemyStg = (lvl / 2) * 4;
+        const enemyAttr = {hp: (lvl / 2) * 20,
+         def: (lvl / 2) * 2,
+         sta: (lvl / 2) * 2,
+         stg: (lvl / 2) * 4
+        }
 
-        const enemyHit = enemySta * enemyStg;
-        const enemyReg = enemySta * enemyDef;
+        console.log(enemyAttr.hp);
+        const enemyHit = enemyAttr.Sta * enemyAttr.enemyStg;
+        const enemyReg = enemyAttr.Sta * enemyAttr.enemyDef;
         
     }
 };
