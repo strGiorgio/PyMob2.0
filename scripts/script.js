@@ -22,7 +22,6 @@ const fgr = document.querySelector('fgr');
 const enemyLifeBar = document.querySelector('#enemyLifeBar');
 const mobLifeBar = document.querySelector('#mobLifeBar');
 
-
 class mob {
     constructor(name = "Romarinho") {
         this.mobName = name;
@@ -97,16 +96,26 @@ class battle {
         console.log(`Mob Strenght: ${stg}`);
         console.log(`Mob Points: ${points}`);
 
+        const mobAttr = {
+            life: hp,
+            defense: def,
+            stamina: sta,
+            strength: stg
+        }
+        const level = lvl
+        points = 0
+
         const mobHit = sta * stg;
         const mobReg = sta * def;
         const mobAtkEsp = stg * 1.5;
     }
 
     enemy(lvl) {
-        const enemyAttr = {hp: (lvl / 2) * 20,
-         def: (lvl / 2) * 2,
-         sta: (lvl / 2) * 2,
-         stg: (lvl / 2) * 4
+        const enemyAttr = {
+            life: (lvl / 2) * 20,
+            defense: (lvl / 2) * 2,
+            stamina: (lvl / 2) * 2,
+            strength: (lvl / 2) * 4
         }
 
         console.log(enemyAttr.hp);
