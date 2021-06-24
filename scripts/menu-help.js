@@ -22,3 +22,6 @@ function closeByEsc(event) {
         menuHelp.classList.remove('on');
     }
 }
+
+const getDates = require('./mobObject');
+console.log(getDates, "AAAAAAAAA");
