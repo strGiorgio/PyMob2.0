@@ -26,7 +26,7 @@
 }
 
 .damage-value._mobReg {
-    color: green;
+    color: rgb(3, 209, 3);
     position: absolute;
     bottom: 100px;
     left: 50px;
