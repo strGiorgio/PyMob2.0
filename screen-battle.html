@@ -25,16 +25,17 @@
     <header class="main-header">
         <div class="_squareUser"></div>
     </header>
+
     <section class="battle-section">
         <progress id="enemyLifeBar" class="main-lifeBar _enemy" max="100" value="100"></progress>
         
         <div class="wrapper-battleArea">
             <img class="main-img _enemy" src="assets/enemy.png" alt="">
             <div class="circle-floor"></div>
-            <p class="damage-value _enemyDmg">10</p>
+            <p id="statusDamageEnemy" class="damage-value"></p>
         
             <div class="card-status">
-                <progress id="mobLifeBar" class="main-lifeBar _mob" max="100" value="100"></progress>
+                <progress id="mobLifeBar" class="main-lifeBar _mob" max="20" value="20"></progress>
                 <p class="text-status">20/20</p>
                 <button id="atk" class="main-button _status" onclick="action('atk')">Atc!</button>
                 <button id="reg" class="main-button _status" onclick="action('reg')">Reg</button><br>
@@ -43,19 +44,8 @@
             </div>
 
             <img class="main-img _mob" src="assets/charmander.com.png" alt="">
-            <p class="damage-value _mobReg">10</p>
+            <p id="statusDamageMob" class="damage-value"></p>
         </div>
-
-        <p style="display: none" id="name"></p>
-        <p style="display: none" id="points"></p>
-        <p style="display: none" id="hp"></p>
-        <p style="display: none" id="defense"></p>
-        <p style="display: none" id="stamina"></p>
-        <p style="display: none" id="strength"></p>
-        <p style="display: none" id="level"></p>
-        <p style="display: none" id="points"></p>
-        <p style="display: none" id="points"></p>
-
     </section>
     
     <script src="scripts/battle.js"></script>
